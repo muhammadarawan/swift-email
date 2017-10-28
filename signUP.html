@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Sign Up</title>
+</head>
+<script>
+function signUP(form)
+{
+	if(form.fname.value=="" || (!CharOnly(form.fname.value)))
+	{
+		alert("Enter Valid First Name !");
+		form.fname.focus();
+		return false;
+	}
+	if(form.lname.value=="" || (!CharOnly(form.lname.value)))
+	{
+		alert("Enter Valid Last Name !");
+		form.lname.focus();
+		return false;
+	}
+	if(form.reg.value=="" || (!CheckReg(form.reg.value.toUpperCase())))
+	{
+		alert("Enter Valid Registration Number!");
+		form.reg.focus();
+		return false;
+	}
+	if(form.sec.value=='0')
+	{
+		alert("Select Section!");
+		form.sec.focus();
+		return false;
+	}
+	if(form.pass1.value=="")
+	{
+		alert("Enter Password!");
+		form.pass1.focus();
+		return false;
+	}
+	if(form.pass2.value=="")
+	{
+		alert("ReEnter Password!");
+		form.pass2.focus();
+		return false;
+	}	
+	if((form.pass1.value)!=(form.pass2.value))
+	{
+		alert("Password dosn't match Please Eenter password!");
+		form.pass1.value="";
+		form.pass2.value="";
+		form.pass1.focus();
+		return false;
+	}
+	if(form.dob.value=="")
+	{
+        alert("Select Date Of Birth !");
+		form.date.focus();
+		return false;
+    }
+	if(form.email.value=="")
+	{
+        alert("Enter valid email Address!");
+		form.email.focus();
+		return false;
+    }
+	if(!form.pic.value=="")
+		if(!CheckPic(form.pic.value))
+		{
+			alert("Uploaded File is Not an Image !")
+			form.pic.focus();
+			return false;
+		}
+}
+function CheckPic(Pic)
+{
+	var part=/.\b/;
+	var regexp=/^[a-zA-Z0-9]+$/
+	if(Pic.match(part))	//first check that does name contains dot(.)
+	{
+		part = Pic.split('.');
+		alert (part);
+		if((part[1]=="JPG" || part[1]=="jpg") || (part[1]=="PNG" || part[1]=="png") || (part[1]=="GIF" || part[1]=="gif") || (part[1]=="JPEG" || part[1]=="jpeg"))
+		{
+			return true;
+		}
+	}
+	return false;
+}
+function CharOnly(str) 
+{
+	var regexp=/^[a-zA-Z]+$/;
+	return str.match(regexp);
+}
+function CheckReg(str)
+{
+	var regexp=/^(L1)+[FS]+(9|([1][0-4]))+([A-Z\d{4}])+(\d{4})$/;
+	return str.match(regexp);
+}
+
+</script>
+<style>
+a{
+	color:#FFF;
+	text-decoration:none;
+	font-family:"Times New Roman", Times, serif;
+	font-style:italic;
+	font-weight:bolder;
+}
+a:hover{
+	color:#6FF;
+	padding:1px;
+}
+a:visited{
+	color:#CFF;
+}
+font{
+	color:#0099CC;
+	font-weight:bold;
+	font-size:x-large;
+	font-style:italic;
+}
+input[type=text],[type=password],[type=email] {
+	padding:2px;
+	margin-top:5px;
+	margin-bottom:5px;
+	margin-left:10px;
+	border:1px solid #ccc;
+	padding-left:10px;
+	padding-right:10px;
+	font-size:14px;
+}
+</style>
+
+<body>
+<table align="center" height="100%" width="100%" style="margin-top:-10px" >
+    <tr bgcolor="#0066CC" style="width:100%; height:10%">
+        <td  align="left" ><div align="center">
+        <a href="about.html"  >About-Us</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        
+        <a href="www.google.com"  >Terms</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        
+        <a href="www.google.com"  >Admin</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        
+        <a href="signin.php"  >Sign-In</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        
+        <a href="complain.html"  >Complain</a></div>
+        </td>
+    </tr>
+    <tr >
+        <td align="center" bgcolor="#FFFFFF" height="15%" width="100%">
+        <img src="other_pics/chiri.png" width="416" height="248"  /></br>
+        <i><font  size="+3" face="Britannic Bold" style="font-size:xx-large">Hook Yourself Up With Us And Access Fast Using <font color="#3366FF" size="+5" face="Britannic Bold" style="font-size:xx-large">SWIFT</font> Mail!</font></i>
+        </br></br>
+        </td>
+    </tr>
+    <tr>
+        <td align="center" height="80%" valign="middle">
+        <form action="signup_db.php" method="post"  onsubmit="return signUP(this)" enctype="multipart/form-data" >
+            <i><b><font  size="+3"  face="Britannic Bold">
+            First Name:<input type="text" name="fname"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Last Name:<input type="text" name="lname"/>
+            <table>
+            <tr>
+            <td>
+            Registeration #<br /><br />
+            Section:<br /><br />
+            Password:<br /><br />
+            Renter Password:<br /><br />
+            Date Of Birth:<br /><br />
+            E.mail Address:<br /><br />
+			Profile Pic:<br /><br />
+            Option:
+            </td>
+            <td>
+            <input type="text" name="reg"/></br><br />
+            &nbsp&nbsp;<select name="sec">
+            <option value="0">~/-Select-/~</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+            <option value="D">D</option>
+            </select><br /><br />
+            <input type="password" name="pass1"/><br /><br />
+            <input type="password" name="pass2"/></br><br />
+            &nbsp;&nbsp;<input type="date" name="bday" max="1999-12-31" min="1920-12-31"><br><br />
+            <input type="email" name="email"/></br><br />
+            <input type="file" name="pic"/><br /><br />
+            <input type="radio" name="option" id="teacher" value="Teachers"/>Teacher 
+            <input type="radio" name="option" id="student"  value="Students"/>Student
+            </td>
+            </tr>
+            </table>
+            <input type="image" src="other_pics/signupbutton.jpg" align="middle" height="55" width="120" alt="Submit Form" title="Sign up"/>
+            </font></b></i>
+        </form>
+        </td>
+    </tr>
+</body>
+</html>

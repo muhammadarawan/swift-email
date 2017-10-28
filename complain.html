@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Complains </title>
+</head>
+<body>
+<style>
+a{
+	color:#FFF;
+	text-decoration:none;
+	font-family:"Times New Roman", Times, serif;
+	font-style:italic;
+	font-weight:bolder;
+}
+a:hover{
+	color:#6FF;
+	padding:1px;
+}
+a:visited{
+	color:#CFF;
+}
+</style>
+<script>
+function signUP(form)
+{
+	reg=form.regno.value;
+	if(form.regno.value=="" || (!checkReg(form.regno.value.toUpperCase())))
+	{
+		alert("enter valid registration number!");
+		form.regno.focus();
+		return false;	
+		}
+	
+
+}
+function checkAdd(add)
+{
+    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(add);
+}
+
+</script>
+
+<table bgcolor="#FFFFFF" width="100%" style="margin-top:-10px;margin-left:-7px;margin-right:-7px" >
+	<tr bgcolor="#0066CC" style="width:100%;">
+        <td  align="left" >        
+          <div align="center"><a href="about.html" style="color:#FFF" >About-Us</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            
+            <a href="www.google.com" style="color:#FFF" >Terms</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            
+            <a href="www.google.com" style="color:#FFF" >Admin</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            
+            <a href="signin.php" style="color:#FFF" >Sign-In</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            
+            <a href="complain.html" style="color:#FFF" >Complain</a>
+        </div></td>
+    </tr>
+    <tr>
+        <td align="center">
+        <img src="other_pics/chiri.png"  />
+        </td>
+    </tr>
+	<tr height="50%" width="100%" align="center" valign="middle">
+        <td>
+        <div style="width:70%;">
+        <i>
+        <font color="#0099CC" size="+3" face="Britannic Bold" style="font-size:xx-large">
+        Please feel free to register any complains regarding to your mail ! 
+        </font>
+        </i>
+        </div>
+        </br></br>
+        </td>
+    </tr>
+	<tr>
+        <td align="center" height="80%" valign="middle">
+        <div style="width:70%;">
+        <form action="compl_db.php" method="post"  onsubmit="return signUP(this)" >
+        <i><b><font color="#0099CC" size="+3"  face="Britannic Bold"/>
+        First Name:<input type="text" name="firstName"/><br />
+        Last Name:<input type="text" name="lastName"/></br>
+        Registeration# <input type="text" name="reg"/></br>
+        Complain:<input type="text" name="complain"/></br>
+        </i>
+        </b>
+        </font>
+        <input type="image" src="other_pics/signupbutton.jpg" align="middle" height="55" width="120" alt="Submit Form" title="Sign up"/>
+        </form>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

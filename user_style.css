@@ -1,0 +1,290 @@
+body {
+    color: #333;
+}
+a {
+    text-decoration: none;
+    color: #1b98f8;
+}
+ #left_div{
+        padding-left:500px; 
+}
+#menu
+{
+	background: transparent;
+    border: none;
+    text-align: left;
+	font-size:large;
+	color:#03F;
+	
+}
+#navi
+{
+    background: rgb(37, 42, 58);
+    text-align: center;  
+	 height: 80%;
+	 left:0px;
+     width:220px;
+     height: 100%;
+		position: fixed;
+        top: 0;
+        bottom: 0;
+}
+#navi_sub
+{
+	padding-top:250px;
+	
+}
+#compose_btn
+{
+	border-radius:20px;
+	border-color:#000;
+	color:#2A3F55;
+	background-color:#0FF;
+	padding-left:5px;
+	padding-right:5px;
+	padding-bottom:2px;
+	padding-top:2px;
+}
+.email
+{
+	padding-top:20px ;
+	padding-left:20px;
+	padding-bottom:10px;
+    border-bottom: 1px solid #ddd;
+	
+}
+button:hover,a.hover,li:hover,.email:hover
+{
+	opacity:.80;
+	cursor:pointer;
+}
+
+#list {
+		position: fixed;
+        top: 0;
+        bottom: 0;
+        overflow: auto;
+//        margin-left: -280px;
+		left:220px;
+        width:350px;
+        height: 100%;
+        border-right: 1px solid #ddd;
+	   border-bottom: 1px solid #ddd;
+}
+.email_pic {
+        width: 40px;
+        height: 40px;
+	   border-radius: 3px;
+}
+
+
+.sender_name,.email_subject {
+        margin: 0;
+    }
+.sender_name {
+        text-transform: uppercase;
+        color: #999;
+}
+.email_msg {
+        font-size: 80%;
+        margin: 0.4em 0;
+}
+
+#comp_email {
+		position: fixed;	
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 570px;
+        overflow: auto;
+        width: auto; 
+
+        margin: 0;
+        padding: 0;
+}
+#comp_email_title {
+        margin: 0.5em 0 0;
+}
+
+.comp_email_subtitles {
+        font-size: 1em;
+        margin: 0;
+        font-weight: normal;
+}
+.comp_email_subtitles span {
+	color: #999;
+}
+.comp_email_btns {
+        margin-top: 2em;
+        text-align: right;
+}
+.comp_email_btns .secondary-button {
+        margin-bottom: 0.3em;
+}	
+.comp_email_header, .comp_email_body{
+    padding: 1em 4em;
+}
+.comp_email_header {
+    border-bottom: 1px solid #ddd;
+}
+.primary-button,.secondary-button {
+
+    border-radius: 20px;
+}
+.primary-button {
+    color: #fff;
+    background: #1b98f8;
+    margin: 1em 0;
+}
+.secondary-button {
+    background: #fff;
+    border: 1px solid #ddd;
+    color: #666;
+    padding: 0.5em 2em;
+    font-size: 80%;
+}
+#composediv
+{
+	width:100%;
+	height:100%;
+	display:none;
+	background-color:#808080;
+	opacity:0.90;
+	position:fixed;
+	top:0;
+	left:0;
+}
+#subcomposediv
+{
+	position:absolute;
+	left:32%;
+	top:5%;
+	
+	
+}
+#myform
+{
+	max-width:350px;
+	min-width:250px;
+	padding:10px 50px;
+	border:2px solid gray;
+	border-radius:10px;
+	font-family:raleway;
+	background-color:#fff;
+}
+input[type=text] {
+	width:82%;
+	padding:5px;
+	margin-top:10px;
+	margin-bottom:10px;
+	margin-left:20px;
+	border:1px solid #ccc;
+	padding-left:40px;
+	font-size:16px;
+	font-family:raleway
+}
+
+#msg
+{
+	width:82%;
+	height:125px;
+	padding:10px;
+	resize:none;
+	margin-top:10px;
+	margin-bottom:10px;
+	margin-left:20px;
+	border:1px solid #ccc;
+	padding-left:40px;
+	font-size:16px;
+	font-family:raleway;
+	
+}
+.send
+{
+	text-decoration:none;
+	width:100%;
+	text-align:center;
+	display:block;
+	background-color:#FFBC00;
+	color:#fff;
+	border:1px solid #FFCB00;
+	padding:10px 0;
+	font-size:20px;
+	border-radius:5px;
+	margin-bottom:20px;
+	margin-top:10px;
+	
+}
+#newMag
+{
+	font-family:"Times New Roman", Times, serif;
+	font-style:italic;
+	background-color:#FEFFED;
+	padding:20px 35px;
+	margin:-10px -50px;
+	text-align:center;
+	border-radius:20px;
+}
+#close
+{
+	width:2.3%;
+	position:absolute;
+	right:10px;
+	top:10px;
+}
+#minimize
+{
+	width:2.3%;
+	position:absolute;
+	right:30px;
+	top:10px;
+}
+#close:hover,#minimize:hover
+{
+	opacity:.50;
+	cursor:pointer;
+}
+
+#send:hover
+{
+	opacity:.80;
+}
+
+hr {
+	margin:10px -50px;
+}
+label
+{
+	font-weight:bold;
+	font-style:oblique;
+}
+.comp_email_details
+{
+	font-family:"Times New Roman", Times, serif;
+	font-weight:bold;
+	color:#000000;
+	display:inline;
+}
+#img
+{
+	height: 80px;
+    width: 80px;
+	position:fixed;
+	right:10px;
+	top:10px;
+	-webkit-box-shadow: 5px 5px 5px #111;
+    box-shadow: 5px 5px 5px #111;
+	border-radius:20px;
+}
+#img:hover
+{
+	cursor:pointer;
+	height: 100px;
+  width: 100px;
+
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+}
